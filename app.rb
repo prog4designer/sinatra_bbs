@@ -5,6 +5,7 @@ Bundler.require
 
 configure do
   MESSAGES = []
+  set :haml, :format => :html5, :escape_html => true
 end
 
 get '/' do
