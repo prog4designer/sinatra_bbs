@@ -1,0 +1,13 @@
+%h1 Sample
+%p main
+
+%form{:action => '/', :method => 'post'}
+  %div
+    %input{:type => 'text', :name => 'message'}
+  %div
+    %input{:type => 'submit', :value => 'Send'}
+
+- if messages.length > 0
+  %ul
+    - for message in messages
+      %li=message
