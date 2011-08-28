@@ -1,0 +1,11 @@
+production:
+  host: localhost
+  database: bbs
+
+development:
+  host: localhost
+  database: bbs
+
+test:
+  host: localhost
+  database: bbs_test

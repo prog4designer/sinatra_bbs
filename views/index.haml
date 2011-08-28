@@ -1,6 +1,11 @@
 %h1 Sample
 %p main
 
+- if flash[:errors].present?
+  %ul
+    - flash[:errors].each do |k, v|
+      %li="#{k}: #{v}"
+
 %form{:action => '/', :method => 'post'}
   %div
     %input{:type => 'text', :name => 'message'}
@@ -10,4 +15,4 @@
 - if messages.length > 0
   %ul
     - for message in messages
-      %li=message
+      %li=message.message
